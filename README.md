@@ -1,5 +1,5 @@
 # TSP-node
-A node.js API to solve traveling salesman problem
+A node.js API to solve traveling salesman problem  
 Forked from https://github.com/gwenaelMonier/tsp-node
 
 ## Configuration
