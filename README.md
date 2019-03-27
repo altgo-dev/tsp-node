@@ -1,5 +1,6 @@
 # TSP-node
-A node.js API to solve traveling salesman problem
+A node.js API to solve traveling salesman problem  
+Forked from https://github.com/gwenaelMonier/tsp-node
 
 ## Configuration
 Add your google map api key (with directions enabled) to file tsp-node/.env ([Create google maps directions API key](https://developers.google.com/maps/documentation/directions/start#get-a-key))

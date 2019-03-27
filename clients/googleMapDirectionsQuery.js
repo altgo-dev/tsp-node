@@ -11,20 +11,19 @@ class GoogleMapDirectionsQuery {
     });
 
     let tasklen = routeOptimizerQuery.tasks.length;
+    let lastWaypoint = routeOptimizerQuery.tasks[tasklen - 1];
     let routingType = routeOptimizerQuery.routingType;
+
     this.origin = routeOptimizerQuery.home;
-    if (!routingType) {
-      this.destination = routeOptimizerQuery.home;
-    } else if (routingType === 'AtoZ') {
-      this.destination = routeOptimizerQuery.tasks[tasklen - 1];
+    this.destination = this.origin;
+    if (routingType === 'AtoZ') {
+      this.destination = lastWaypoint;
     } else if (routingType === 'RoundTrip') {
-      this.destination = routeOptimizerQuery.home;
-    } else {
-      this.destination = routeOptimizerQuery.home;
+      this.destination = this.origin;
     }
     this.waypoints = waypoints;
-    this.optimize = true;
-    this.mode = 'driving';
+    this.optimize = routeOptimizerQuery.optimize || true;
+    this.mode = routeOptimizerQuery.mode || 'driving';
   }
 }
 
