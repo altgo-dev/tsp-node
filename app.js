@@ -34,7 +34,7 @@ app.use(function(err, req, res, next) {
   res.status(400).json(apiResponse);
 });
 
-const server = app.listen(process.env.PORT || 3000, '127.0.0.1', function() {
+const server = app.listen(process.env.PORT || 3000, function() {
 
   const host = server.address().address;
   const port = server.address().port;
