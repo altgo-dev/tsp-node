@@ -3,7 +3,7 @@
 class GoogleMapDirectionsQuery {
 
   constructor(routeOptimizerQuery) {
-    const waypoints = routeOptimizerQuery.tasks.map(function (task) {
+    const waypoints = routeOptimizerQuery.tasks.map(function(task) {
       return {
         lat: task.lat,
         lng: task.lng,

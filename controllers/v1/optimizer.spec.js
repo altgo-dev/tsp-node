@@ -14,6 +14,7 @@ describe('Route optimizer controller', function() {
       .send(body)
       .expect(400)
       .end(function(err, res) {
+        if (err){}
         const response = JSON.parse(res.text);
 
         assert.equal(response.status, 'INVALID_REQUEST');
@@ -41,6 +42,7 @@ describe('Route optimizer controller', function() {
       .send(body)
       .expect(200)
       .end(function(err, res) {
+        if (err){}
         const response = JSON.parse(res.text);
 
         assert.equal(response.status, 'OK');
